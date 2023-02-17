@@ -1,3 +1,5 @@
+import 'modern-normalize';
+
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
@@ -8,17 +10,20 @@ import data from './data.json';
 import friends from './friends.json';
 import transactions from './transactions.json';
 
+import style from './App.module.css';
+
 export const App = () => {
   return (
     <div
-    // style={{
-    //   height: '100vh',
-    //   display: 'flex',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   fontSize: 40,
-    //   color: '#010101',
-    // }}
+      className={style.container}
+      // style={{
+      //   height: '100vh',
+      //   display: 'flex',
+      //   justifyContent: 'center',
+      //   alignItems: 'center',
+      //   fontSize: 40,
+      //   color: '#010101',
+      // }}
     >
       <Profile
         username={user.username}

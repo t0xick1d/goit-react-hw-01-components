@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import style from './Statistics.module.css';
 
-export default function StatistickItem({ label, percentage }) {
+export default function StatistickItem({ label, percentage, color }) {
   return (
-    <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}%</span>
+    <li className={style.item} style={{ backgroundColor: color }}>
+      <span className={style.label}>{label}</span>
+      <span className={style.percentage}>{percentage}%</span>
     </li>
   );
 }
@@ -12,4 +13,5 @@ export default function StatistickItem({ label, percentage }) {
 StatistickItem.prototype = {
   label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
+  color: PropTypes.number.isRequired,
 };
